@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Project: Blog</title>
+    </head>
+    <body>
+    <style>
+        body{
+            background-color:rgb(230, 240, 255);
+            font-family:serif;        }
+            
+            
+            h2{
+                font-family:cursive;
+                color:rgb(87, 201, 144);
+            }
+            h3{
+                background-color:white;
+            
+            }
+            .a{
+            color:rgb(23, 167, 92);
+            font-family:Monospace;
+            }
+            </style>
+        
+        <h2>Estiyar's travelling blog</h2>
+
+        <h3 class = "a">Contents</h3>
+        <ol class = "a">
+            <li><a href ="#es">My first post!</a></li>
+            <li>About me </li>
+            <li>hobbies</li>
+        </ol>
+        
+        <h2 id="ea">First post</h2>
+        <h4 class = "a">Magical turkey - black sea</h4>
+        <img src="https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/landscapes/beach-sunset.png"width="350">
+        <h6 class = "a" >Posted on 11:15 in 2025</h6>
+        
+        <p class = "a">Second trip of my life was - Turkey.Sunsets are the best here!</p>
+        
+        
+        
+    </body>
+</html>
