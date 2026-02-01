@@ -1,0 +1,337 @@
+  <style>
+    
+.topbar {
+  background: #0b0f14;
+  color: #fff;
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.topbar-inner {
+  width: min(1200px, 94%);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.gh-logo {
+  display: flex;
+  align-items: center;
+}
+
+.gh-logo img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  cursor: pointer;
+  filter: invert(1);
+}
+
+
+.nav {
+  display: flex;
+  gap: 14px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.nav a:hover {
+  opacity: 0.85;
+}
+
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.search {
+  background: #161b22;
+  border: 1px solid #30363d;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  width: 180px;
+}
+
+.search::placeholder {
+  color: #8b949e;
+}
+
+.signin {
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.signup {
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+
+.sr-only {
+  position: absolute;
+  left: -9999px;
+}
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #0b0f14;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+      padding: 44px 0 70px;
+    }
+
+    
+    header.hero {
+      text-align: center;
+      margin-bottom: 34px;
+    }
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .hero p {
+      margin: 0 auto 18px;
+      max-width: 720px;
+      line-height: 1.45;
+      color: #57606a;
+      font-size: 14px;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      border: 1px solid #d0d7de;
+      background: #0b0f14;
+      color: #fff;
+      font-weight: 700;
+      padding: 10px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .btn.secondary {
+      background: #fff;
+      color: #0b0f14;
+    }
+    .btn:hover { filter: brightness(0.96); }
+    .btn:active { transform: scale(0.99); }
+
+    
+    .pricing-row {
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      align-items: stretch;
+      margin: 28px 0 40px;
+      
+    }
+
+    .card {
+      width: 320px;
+      border: 1px solid #d0d7de;
+      border-radius: 12px;
+      padding: 18px 18px 16px;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      position: relative;
+    }
+    .card h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+    }
+    .muted {
+      margin: 0 0 14px;
+      color: #57606a;
+      font-size: 12px;
+      line-height: 1.35;
+      min-height: 32px;
+    }
+
+    .price {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin: 8px 0 10px;
+    }
+    .price strong {
+      font-size: 32px;
+      letter-spacing: -0.02em;
+    }
+    .price span {
+      color: #57606a;
+      font-size: 12px;
+    }
+
+    .card-cta {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid #d0d7de;
+      background: #fff;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .card-cta.primary {
+      background: #0b0f14;
+      color: #fff;
+      border-color: #0b0f14;
+    }
+
+    .divider {
+      height: 1px;
+      background: #e6edf3;
+      margin: 14px 0;
+    }
+
+    .features {
+      margin: 0;
+      padding-left: 16px;
+      color: #24292f;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+    .features li { margin: 6px 0; }
+
+    
+    .recommended {
+      border: 2px solid #0969da;
+      transform: translateY(-8px);
+    }
+    .badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 11px;
+      font-weight: 800;
+      background: #0969da;
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: 999px;
+    }
+
+    
+    section.addons h2 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: -0.01em;
+    }
+    section.addons p {
+      margin: 0 0 16px;
+      color: #57606a;
+      font-size: 13px;
+      line-height: 1.45;
+      max-width: 760px;
+    }
+
+    .addons-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .addon {
+      border: 1px solid #d0d7de;
+      border-radius: 12px;
+      padding: 14px 14px 12px;
+      background: #fff;
+    }
+    .addon-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: flex-start;
+      margin-bottom: 6px;
+    }
+    .addon h4 {
+      margin: 0;
+      font-size: 14px;
+    }
+    .tag {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid #d0d7de;
+      color: #57606a;
+      white-space: nowrap;
+    }
+    .addon p {
+      margin: 0;
+      font-size: 12px;
+      color: #57606a;
+      line-height: 1.35;
+    }
+
+    
+    .cta-form {
+      margin-top: 16px;
+      display: flex;
+      justify-content: center;
+    }
+    form.news {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    label {
+      font-size: 12px;
+      color: #57606a;
+      font-weight: 700;
+    }
+    input[type="email"] {
+      width: 260px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid #d0d7de;
+      outline: none;
+    }
+
+    
+    @media (max-width: 900px) {
+      .pricing-row { gap: 14px; }
+      .card { width: 100%; max-width: 520px; }
+      .recommended { transform: none; }
+      .addons-grid { grid-template-columns: 1fr; }
+      input[type="email"] { width: min(320px, 86vw); }
+    }
+  </style>
