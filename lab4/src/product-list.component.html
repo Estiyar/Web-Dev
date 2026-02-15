@@ -1,0 +1,64 @@
+<div class="container">
+  <header class="header">
+    <h1>🛍️ Интернет-магазин Kaspi.kz</h1>
+    <p>Лучшие товары по выгодным ценам</p>
+  </header>
+
+  <div class="products-grid">
+    <div class="product-card" *ngFor="let product of products" (click)="openProduct(product.link)">
+      <!-- Галерея изображений -->
+      <div class="image-gallery">
+        <img [src]="getCurrentImage(product)" [alt]="product.name" class="product-image">
+        
+        <!-- Навигация по изображениям -->
+        <div class="gallery-controls">
+          <button class="nav-button prev" (click)="prevImage(product, $event)" title="Предыдущее фото">
+            ◀
+          </button>
+          <button class="nav-button next" (click)="nextImage(product, $event)" title="Следующее фото">
+            ▶
+          </button>
+        </div>
+
+        <!-- Индикаторы изображений -->
+        <div class="image-indicators">
+          <span 
+            *ngFor="let img of product.images; let i = index"
+            class="indicator"
+            [class.active]="currentImageIndex[product.id] === i"
+            (click)="selectImage(product.id, i, $event)">
+          </span>
+        </div>
+      </div>
+
+      <!-- Информация о товаре -->
+      <div class="product-info">
+        <h3 class="product-name">{{ product.name }}</h3>
+        <p class="product-description">{{ product.description }}</p>
+        
+        <!-- Рейтинг -->
+        <div class="rating">
+          <span *ngFor="let filled of getStars(product.rating)" class="star" [class.filled]="filled">
+            ★
+          </span>
+          <span class="rating-value">{{ product.rating }}</span>
+        </div>
+
+        <!-- Цена -->
+        <div class="price">
+          {{ product.price | number:'1.0-0' }} ₸
+        </div>
+
+        <!-- Кнопки действий -->
+        <div class="actions">
+          <button class="btn-share whatsapp" (click)="shareOnWhatsApp(product, $event)" title="Поделиться в WhatsApp">
+            <span class="icon">📱</span> WhatsApp
+          </button>
+          <button class="btn-share telegram" (click)="shareOnTelegram(product, $event)" title="Поделиться в Telegram">
+            <span class="icon">✈️</span> Telegram
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
