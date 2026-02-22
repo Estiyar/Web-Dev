@@ -1,0 +1,49 @@
+<div class="card">
+
+  <!-- Gallery -->
+  <div class="gallery">
+    <a [href]="product.link" target="_blank">
+      <img [src]="activeImage" [alt]="product.name" class="main-img" />
+    </a>
+    <div class="thumbs">
+      @for (img of product.images; track img) {
+        <img
+          [src]="img"
+          [class.active]="img === activeImage"
+          (click)="activeImage = img"
+          alt="thumb"
+          class="thumb"
+        />
+      }
+    </div>
+  </div>
+
+  <!-- Info -->
+  <div class="info">
+    <a [href]="product.link" target="_blank" class="name">{{ product.name }}</a>
+    <p class="desc">{{ product.description }}</p>
+
+    <div class="meta">
+      <span class="price">{{ product.price | number }} ₸</span>
+      <span class="rating">
+        @for (i of [1,2,3,4,5]; track i) {
+          <span [class.filled]="i <= product.rating">★</span>
+        }
+        {{ product.rating }}
+      </span>
+    </div>
+
+    <!-- Like + Delete -->
+    <div class="actions">
+      <button class="btn-like" (click)="onLike()">❤ {{ product.likes }}</button>
+      <button class="btn-delete" (click)="onDelete()">🗑 Удалить</button>
+    </div>
+
+    <!-- Share -->
+    <div class="share">
+      <a [href]="whatsappUrl" target="_blank" class="btn-share wa">WhatsApp</a>
+      <a [href]="telegramUrl" target="_blank" class="btn-share tg">Telegram</a>
+    </div>
+  </div>
+
+</div>

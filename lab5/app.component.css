@@ -1,0 +1,46 @@
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.categories {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.cat-btn {
+  padding: 10px 24px;
+  border: 2px solid #ddd;
+  border-radius: 24px;
+  background: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.cat-btn:hover {
+  border-color: #e02020;
+  color: #e02020;
+}
+
+.cat-btn.active {
+  background: #e02020;
+  border-color: #e02020;
+  color: #fff;
+}
+
+.welcome {
+  text-align: center;
+  font-size: 20px;
+  color: #888;
+  margin-top: 60px;
+}

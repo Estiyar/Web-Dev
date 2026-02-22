@@ -1,0 +1,23 @@
+<div class="page">
+  <h1>Онлайн магазин</h1>
+
+  <!-- Кнопки категорий -->
+  <div class="categories">
+    @for (cat of categories; track cat.id) {
+      <button
+        class="cat-btn"
+        [class.active]="selectedCategoryId === cat.id"
+        (click)="selectCategory(cat.id)"
+      >
+        {{ cat.name }}
+      </button>
+    }
+  </div>
+
+  <!-- Список товаров -->
+  @if (selectedCategoryId === null) {
+    <p class="welcome">👆 Выберите категорию чтобы увидеть товары</p>
+  } @else {
+    <app-product-list [products]="filteredProducts" />
+  }
+</div>

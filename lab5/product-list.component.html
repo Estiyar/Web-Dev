@@ -1,0 +1,14 @@
+<div class="list">
+  @if (localProducts.length === 0) {
+    <p class="empty">Товары в этой категории закончились 😔</p>
+  } @else {
+    <div class="grid">
+      @for (product of localProducts; track product.id) {
+        <app-product-item
+          [product]="product"
+          (delete)="onDelete($event)"
+        />
+      }
+    </div>
+  }
+</div>
