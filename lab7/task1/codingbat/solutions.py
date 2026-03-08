@@ -1,4 +1,4 @@
-
+##
 
 def sleep_in(weekday, vacation):
     """Return True if we can sleep in — not a weekday or on vacation."""

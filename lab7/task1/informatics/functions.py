@@ -1,4 +1,4 @@
-
+##
 def maximum(a, b):
     """Return the larger of two numbers."""
     return a if a >= b else b
