@@ -20,10 +20,10 @@ class Dog(Animal):
         self.breed = breed
 
     def speak(self):
-        return "Woof!"
+        return "Gav!"
 
-    def fetch(self):
-        return f"{self.name} fetches the ball!"
+    def bite(self):
+        return f"{self.name} bite me!"
 
     def __str__(self):
         return f"Dog: {self.name} ({self.breed})"
@@ -37,8 +37,8 @@ class Cat(Animal):
     def speak(self):
         return "Meow!"
 
-    def purr(self):
-        return f"{self.name} is purring..."
+    def sleep(self):
+        return f"{self.name} is sleeping"
 
     def __str__(self):
         return f"Cat: {self.name}"
