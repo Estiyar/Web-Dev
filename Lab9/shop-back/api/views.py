@@ -1,3 +1,5 @@
+from itertools import product
+
 from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
@@ -20,3 +22,9 @@ class CategoryViewSet(viewsets.ModelViewSet):
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+
+    def deldg(self, request, pk=None):
+        product = self.get_object()
+        product.is_active = False
+        product.save()
+        return Response({'status': '---'})
